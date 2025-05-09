@@ -12,7 +12,7 @@
 
 body {
     background-color: var(--color-2);
-  }
+}
 
 header {
     background-color: #0D1B2A;
@@ -35,7 +35,7 @@ h1 {
 nav {
 	background-color: #36454f;
 	margin: 0 auto;
-	max-width: 100%
+	max-width: 100%;
 }
 
 nav ul {
