@@ -67,6 +67,7 @@ nav a:hover {
 		flex: 1 1 auto;
 
 }
+}
 
 h2 {
     background-color: var(--color-1);
@@ -122,5 +123,5 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 1rem;
-	margin-top: 2rem;
+    margin-top: 2rem;
 }
