@@ -13,7 +13,7 @@
     padding: 0;
   }
 
-  main {
+  .gallery {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1500px;
     margin: 0 auto;
