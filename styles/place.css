@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: 'Tinos', serif;
+}
+
+.hero {
+    background-image: url(../images/falls.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+
+.hero-left, .hero-right {
+  flex: 1;
+}
+
+footer {
+  background-color: #3790b9
+  font-family: 'Tinos', serif;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
