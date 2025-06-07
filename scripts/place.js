@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     windChillDisplay = `${chill}°C`;
   }
 
-  document.getElementById("Wind Chill").textContent = `Wind Chill: ${windChillDisplay}`;
+  document.getElementById("WindChill").textContent = `Wind Chill: ${windChillDisplay}`;
 });
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
