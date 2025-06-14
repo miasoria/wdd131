@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4A6B8A; 
     --secondary-color: #8FB2BF;
-    --accent-color: #D9B38B; 
+    --accent-color: #A67C52; 
     --background-color: #F5F5DC; 
     --text-color: #333333;
 }
@@ -30,7 +30,6 @@ header h1 {
 
 header p {
     font-size: 1.2em;
-    opacity: 0.9;
 }
 
 main {
@@ -58,7 +57,7 @@ section h2 {
     margin-bottom: 0.8em;
     text-align: center;
 }
-/
+
 ul, ol {
     margin-left: 20px;
 }
