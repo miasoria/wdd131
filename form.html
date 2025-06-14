@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product Review - WDD 131 - Mia Soria">
+  <meta name="author" content="Mia Soria">
+  <title>Product Review - WDD 131</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <form id="reviewForm" method="get" action="review.html">
+      <label for="productSelect">Product:</label>
+      <select id="productSelect" name="product" required>
+        <option disabled selected value="">Select a product…</option>
+      </select>
+
+      <fieldset>
+        <legend>Rating:</legend>
+        <label for="rating1"><input type="radio" id="rating1" name="rating" value="1" required>1</label>
+        <label for="rating2"><input type="radio" id="rating2" name="rating" value="2">2</label>
+        <label for="rating3"><input type="radio" id="rating3" name="rating" value="3">3</label>
+        <label for="rating4"><input type="radio" id="rating4" name="rating" value="4">4</label>
+        <label for="rating5"><input type="radio" id="rating5" name="rating" value="5">5</label>
+      </fieldset>
+
+      <label for="installDate">Installation Date:</label>
+      <input type="date" id="installDate" name="date" required>
+
+      <fieldset>
+        <legend>Which features did you find useful?</legend>
+        <label for="feat1"><input type="checkbox" id="feat1" name="features" value="easy_install">Easy to install</label>
+        <label for="feat2"><input type="checkbox" id="feat2" name="features" value="fast_performance">Fast performance</label>
+        <label for="feat3"><input type="checkbox" id="feat3" name="features" value="user_friendly">User-friendly</label>
+        <label for="feat4"><input type="checkbox" id="feat4" name="features" value="good_support">Good support</label>
+      </fieldset>
+
+      <label for="comments">Review (optional):</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <label for="username">Username (optional):</label>
+      <input type="text" id="username" name="username">
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+  <footer>
+    <p>© <span id="currentyear"></span> Mia Soria - Argentina</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

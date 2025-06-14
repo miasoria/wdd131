@@ -1,0 +1,139 @@
+:root {
+  --color-bg: #fafafa;
+  --color-primary: #4a90e2;
+  --color-primary-hover: #357ab8;
+  --color-text: #333;
+  --color-border: #ccc;
+  --spacing: 1rem;
+  --radius: 0.5rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--spacing);
+}
+
+main {
+  flex: 1;
+  padding: calc(var(--spacing) * 1.5);
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, fieldset {
+  margin-top: var(--spacing);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 0.25em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+}
+
+legend {
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+label > input[type="radio"],
+label > input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+input[type="submit"] {
+  margin-top: calc(var(--spacing) * 1.5);
+  padding: 0.75em;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--color-primary-hover);
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing) 0;
+}
+
+main ul li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+main ul li:last-child {
+  border-bottom: none;
+}
+
+main ul li span {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+header h1 {
+  margin: 0;
+  padding: var(--spacing) 0;
+  font-size: 1.75rem;
+}
+
+main p:first-of-type {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing);
+}
+
+#counter {
+  margin-top: var(--spacing);
+  font-style: italic;
+}
+
+main ul li:hover {
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: var(--spacing);
+  }
+}
