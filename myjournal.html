@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Spiritual Journal - WDD 131 - Mia Soria">
+  <meta name="author" content="Mia Soria">
+  <title>My Spiritual Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/myjournal.css">
+  <script src="scripts/myjournal.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Spiritual Journal</h1>
+    <p class="subtitle">A space to reflect with faith and love</p>
+  </header>
+  <main>
+    <section class="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Spiritual journaling is a practice of recording thoughts, feelings, and experiences related to your faith. It’s an intimate moment with your soul and with God.
+      </p>
+      <img src="images/vintage-journal.webp" alt="Vintage journal" loading="lazy" />
+    </section>
+    <section class="two-column">
+      <div class="prompts">
+        <h2>Writing Prompts</h2>
+        <ul>
+          <li>What blessings did I notice today?</li>
+          <li>What did I learn from my scripture study?</li>
+          <li>How did I feel the Spirit’s guidance?</li>
+        </ul>
+      </div>
+      <div class="journal-entry">
+        <h2>Sample Journal Entry</h2>
+        <form id="journalForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="mood">How are you feeling today?</label>
+          <select id="mood" name="mood" required>
+            <option value="">Select one</option>
+            <option value="Grateful">Grateful</option>
+            <option value="Hopeful">Hopeful</option>
+            <option value="Anxious">Anxious</option>
+            <option value="Happy">Happy</option>
+            <option value="Tired">Tired</option>
+          </select>
+
+          <label for="entry">Today's Reflection:</label>
+          <textarea id="entry" name="entry" rows="6" required></textarea>
+
+          <button type="submit">Save Entry</button>
+        </form>
+        <div id="saveMessage"></div>
+      </div>
+    </section>
+    <section class="quote">
+      <h2>Quote</h2>
+      <blockquote>
+        “Faith is taking the first step even when you don’t see the whole staircase.”  
+        — Martin Luther King Jr.
+      </blockquote>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="currentyear"></span> Mia Soria - Argentina</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+</html>
