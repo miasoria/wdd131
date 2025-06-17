@@ -1,31 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("journalForm");
   const saveMessage = document.getElementById("saveMessage");
 
-  const savedEntry = JSON.parse(localStorage.getItem("journalEntry"));
-  if (savedEntry) {
-    document.getElementById("name").value = savedEntry.name;
-    document.getElementById("mood").value = savedEntry.mood;
-    document.getElementById("entry").value = savedEntry.entry;
-  }
-
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const mood = document.getElementById("mood").value.trim();
+    const entry = document.getElementById("entry").value.trim();
+
+    if (!name || !mood || !entry) {
+      alert("Please complete all fields before saving..");
+      return;
+    }
 
     const entryData = {
-      name: document.getElementById("name").value.trim(),
-      mood: document.getElementById("mood").value,
-      entry: document.getElementById("entry").value.trim(),
+      name,
+      mood,
+      entry,
+      date: new Date().toLocaleString(),
     };
 
-    localStorage.setItem("journalEntry", JSON.stringify(entryData));
+    let journalEntries = JSON.parse(localStorage.getItem("journalEntries")) || [];
+    journalEntries.push(entryData);
+    localStorage.setItem("journalEntries", JSON.stringify(journalEntries));
 
-    saveMessage.textContent = "✨ Entry saved successfully!";
-    setTimeout(() => {
-      saveMessage.textContent = "";
-    }, 3000);
+    saveMessage.textContent = `✨ ${name}'s entry was saved successfully!`;
+    form.reset();
   });
-});
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+  const lastModified = document.getElementById("lastModified");
+  const currentYear = document.getElementById("currentyear");
+
+  if (lastModified) {
+    lastModified.textContent = `Última modificación: ${document.lastModified}`;
+  }
+
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
+});
